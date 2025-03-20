@@ -2,9 +2,9 @@ export default function About() {
   return (
     <div className="space-y-16">
       <div className="space-y-8">
-        <h2 className="text-2xl font-medium">SOME OF OUR VALUES</h2>
+        <h2 className="text-2xl font-semibold">SOME OF OUR VALUES</h2>
 
-        <ul className="space-y-6">
+        <ul className="space-y-6  text-xl">
           <li className="flex items-baseline">
             <span className="text-lg mr-2">•</span>
             <div>
