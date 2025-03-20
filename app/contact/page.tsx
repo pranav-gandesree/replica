@@ -3,7 +3,7 @@ import Link from "next/link"
 export default function Contact() {
   return (
     <div className="space-y-12">
-      <h1 className="text-2xl font-medium">CONTACT</h1>
+      <h1 className="text-2xl font-semibold">CONTACT</h1>
 
       <div className="space-y-8">
         <p className="text-lg leading-relaxed">

@@ -6,7 +6,7 @@ export default function Home() {
       
 
       <div className="space-y-8">
-      <h1 className="text-4xl font-light">ithaca</h1>
+      <h1 className="text-4xl font-semibold">Kiko Network</h1>
 
         <div className="space-y-8">
           <p className="text-xl leading-relaxed">
@@ -29,4 +29,13 @@ export default function Home() {
     </div>
   )
 }
+
+
+
+
+
+
+
+
+
 
