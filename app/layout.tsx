@@ -7,10 +7,12 @@ import Navigation from "./components/navigation"
 import Footer from "./components/footer"
 
 export const metadata: Metadata = {
-  title: "Ithaca",
-  description: "A company designed to accelerate the crypto frontier",
-    generator: 'v0.dev'
+  title: "Kiko Network",
+  description: "Hivemapper for hyper local climate data"
 }
+
+
+
 
 export default function RootLayout({
   children,

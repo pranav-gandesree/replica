@@ -1,10 +1,13 @@
+import Image from "next/image";
+import teammember1 from "../../../public/teammember1.jpg"
+
 export default function About() {
   return (
     <div className="space-y-16">
       <div className="space-y-8">
         <h2 className="text-2xl font-semibold">SOME OF OUR VALUES</h2>
 
-        <ul className="space-y-6  text-xl">
+        <ul className="space-y-6  text-lg">
           <li className="flex items-baseline">
             <span className="text-lg mr-2">•</span>
             <div>
@@ -67,15 +70,29 @@ export default function About() {
       <div className="space-y-8">
         <h2 className="text-2xl font-medium">TEAM</h2>
 
-        <div className="flex flex-wrap gap-6 justify-start">
-          {Array(10)
-            .fill(0)
-            .map((_, i) => (
-              <div key={i} className="w-16 h-16 rounded-full bg-gray-700 overflow-hidden">
-                <div className="w-full h-full bg-gray-600"></div>
-              </div>
-            ))}
-        </div>
+<div className="flex flex-wrap gap-6 justify-start">
+      <div className="w-16 h-16 rounded-full overflow-hidden">
+        <Image 
+          src={teammember1} 
+          alt="Team Member 1"
+          width={64} 
+          height={64} 
+          className="w-full h-full object-cover"
+        />
+      </div>
+      
+      <div className="w-16 h-16 rounded-full overflow-hidden">
+        <Image 
+          src={teammember1} 
+          alt="Team Member 2"
+          width={64} 
+          height={64} 
+          className="w-full h-full object-cover"
+        />
+      </div>
+    </div>
+
+
       </div>
     </div>
   )

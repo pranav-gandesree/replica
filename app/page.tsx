@@ -1,7 +1,7 @@
 
-
 export default function Home() {
   return (
+    <>
     <div className="space-y-16">
       
 
@@ -9,7 +9,7 @@ export default function Home() {
       <h1 className="text-4xl font-semibold">Kiko Network</h1>
 
         <div className="space-y-8">
-          <p className="text-xl leading-relaxed">
+          <p className="text-lg leading-relaxed">
             <span className="font-medium">Crypto must go faster.</span> We have started Ithaca, a company designed to
             accelerate the crypto frontier, and have raised $20M from Paradigm.
           </p>
@@ -27,6 +27,8 @@ export default function Home() {
         </div>
       </div>
     </div>
+
+    </>
   )
 }
 

@@ -6,13 +6,16 @@ export default function Footer() {
 
     <>
         <div className="space-y-2 text-md">
-          <div className="border border-gray-800 rounded-lg px-4 py-2 text-center max-w-[450px] mx-auto flex items-center justify-center">
-            <Link href="/updates" className="text-blue-400 underline">
-              Introducing Porto
-            </Link>
-            , a next-gen account for Ethereum.
+        <div className="space-y-2 text-md">
+          <div className="border border-gray-800 rounded-lg px-4 py-2 text-center max-w-[450px] mx-auto">
+            <p className="flex flex-wrap items-center justify-center gap-1">
+              <Link href="/updates" className="text-blue-400 underline">
+                Introducing kiko_network
+              </Link>
+              hivemapper for hyper-local climate data
+            </p>
           </div>
-
+        </div>
           <div className="border border-gray-800 rounded-lg px-4 py-2 text-center max-w-[450px] mx-auto flex items-center justify-center">
             Dive deep into Application Subscriptions with{" "}
             <Link href="/updates" className="text-blue-400 underline">
@@ -56,9 +59,7 @@ export default function Footer() {
           <div className="flex items-center gap-4">
             {/* <span className="text-gray-400">13883188</span> */}
             {/* <span className="text-gray-400">•</span> */}
-            <Link href="https://github.com/ithaca" aria-label="GitHub" className="text-gray-400 hover:text-[#094D3E]">
-              <Github size={20} />
-            </Link>
+            
             <Link href="https://discord.gg/ithaca" aria-label="Discord" className="text-gray-400 hover:text-[#094D3E]">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path

@@ -116,7 +116,7 @@ const handleSubmit = async () => {
 
       <>
       <div className="flex flex-row gap-10">
-
+{/* 
     <div className="flex flex-col items-center justify-center gap-2">
       <h2 className="text-2xl font-bold mb-4">Admin Panel</h2>
       <input
@@ -133,13 +133,41 @@ const handleSubmit = async () => {
         onChange={(e) => setDescription(e.target.value)}
         className="border p-2 rounded w-64 text-center"
         />
-      {/* <input type="file" accept="image/*" onChange={(e) => setImage(e.target.files?.[0] || null)} className="mt-2" /> */}
+    
       <button onClick={handleSubmit} className="bg-green-500 text-white p-2 mt-4 rounded w-32">
         New Update
       </button>
-    </div>
+    </div> */}
 
 
+    
+
+    <div className="flex flex-col items-center justify-center gap-4 p-6 bg-gray-100 rounded-lg shadow-md max-w-md mx-auto">
+  <h2 className="text-2xl font-bold text-[#094D3E]">Admin Panel</h2>
+  
+  <input
+    type="text"
+    placeholder="Enter Title"
+    value={title}
+    onChange={(e) => setTitle(e.target.value)}
+    className="border border-gray-300 p-3 rounded-lg w-full text-center shadow-sm focus:ring-2 focus:ring-[#094D3E] focus:outline-none"
+  />
+  
+  <textarea
+    placeholder="Enter Description"
+    value={description}
+    onChange={(e) => setDescription(e.target.value)}
+    className="border border-gray-300 p-3 rounded-lg w-full text-center shadow-sm focus:ring-2 focus:ring-[#094D3E] focus:outline-none"
+    rows={3}
+  ></textarea>
+
+  <button 
+    onClick={handleSubmit} 
+    className="bg-[#094D3E] text-white p-3 rounded-lg w-full hover:bg-[#066F55] transition-all duration-300 shadow-md"
+  >
+    Add New Update
+  </button>
+</div>
              <UpdatesInfo/>
         </div>
 
