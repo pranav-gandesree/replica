@@ -1,37 +1,53 @@
-import fs from "fs";
-import path from "path";
-import { NextResponse } from "next/server";
 
-const filePath = path.join(process.cwd(), "public", "updates.json");
+import { NextResponse } from "next/server";
+import { supabase } from "@/lib/SupabaseClient";
+
 
 export async function POST(req: Request) {
   try {
     const {title, description} = await req.json();
 
+    // console.log({title, description})
+
     if (!title || !description) {
         return NextResponse.json({ message: "Invalid data" }, { status: 400 });
       }
 
-      
-      if (!fs.existsSync(path.dirname(filePath))) {
-        fs.mkdirSync(path.dirname(filePath), { recursive: true });
-      }
-
+    const response = await supabase.from("updates")
+    .insert([{ 
+      title,
+      description,
+      created_at: new Date().toISOString()}])
+    .select();
     
-    const fileData = fs.existsSync(filePath) ? fs.readFileSync(filePath, "utf-8") : "[]";
-    const updates = JSON.parse(fileData);
+  
+    const { data, error } = response;
 
-    updates.push({
-        title,
-        description,
-        date: new Date().toISOString(), 
-      });
+    if (error) {
+      console.error('Supabase error:', error);
+      return NextResponse.json({ message: "Error saving update", data: data }, { status: 500 });
+  }
 
-    
-    fs.writeFileSync(filePath, JSON.stringify(updates, null, 2));
+  // console.log("responsie is", data)
 
     return NextResponse.json({ message: "Update saved" }, { status: 200 });
   } catch (error) {
+    console.log("error is", error)
     return NextResponse.json({ message: "Error saving update" }, { status: 500 });
+  }
+}
+
+
+
+export async function GET() {
+  try {
+    const { data, error } = await supabase.from("updates").select("*").order("created_at", { ascending: false });
+
+    if (error) throw error;
+
+    return NextResponse.json(data, { status: 200 });
+  } catch (error) {
+    console.log("cant fetch data", error)
+    return NextResponse.json({ message: "Error loading updates", error }, { status: 500 });
   }
 }
