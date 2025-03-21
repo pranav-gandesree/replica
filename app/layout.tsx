@@ -1,7 +1,8 @@
+
+
 import type React from "react"
 import type { Metadata } from "next"
 import "./globals.css"
-
 import Navigation from "./components/navigation"
 import Footer from "./components/footer"
 
@@ -16,6 +17,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
+
+
   return (
     <html lang="en">
       <body className="bg-white text-[#094D3E] min-h-screen">
@@ -23,17 +26,14 @@ export default function RootLayout({
           <div className="max-w-3xl mx-auto px-8 py-12 w-full">
         
               <Navigation />
-      
-
+  
             <main className="px-4 mt-4">{children}</main>
           </div>
           <Footer />
         </div>
+
+
       </body>
     </html>
   )
 }
-
-
-
-import './globals.css'
