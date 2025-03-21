@@ -1,5 +1,7 @@
 import Image from "next/image";
 import teammember1 from "../../../public/teammember1.jpg"
+import teammember2 from "../../../public/teammember2.jpg"
+import Link from "next/link";
 
 export default function About() {
   return (
@@ -72,23 +74,27 @@ export default function About() {
 
 <div className="flex flex-wrap gap-6 justify-start">
       <div className="w-16 h-16 rounded-full overflow-hidden">
+        <Link href="https://x.com/surya_suhaas" target="_blank" rel="noopener noreferrer">
         <Image 
           src={teammember1} 
           alt="Team Member 1"
           width={64} 
           height={64} 
           className="w-full h-full object-cover"
-        />
+          />
+          </Link>
       </div>
       
       <div className="w-16 h-16 rounded-full overflow-hidden">
+      <Link href="https://x.com/nithinexe" target="_blank" rel="noopener noreferrer">
         <Image 
-          src={teammember1} 
+          src={teammember2} 
           alt="Team Member 2"
           width={64} 
           height={64} 
           className="w-full h-full object-cover"
         />
+        </Link>
       </div>
     </div>
 
