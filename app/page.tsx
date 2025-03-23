@@ -10,19 +10,19 @@ export default function Home() {
 
         <div className="space-y-8">
           <p className="text-lg leading-relaxed">
-            <span className="font-medium">Crypto must go faster.</span> We have started Ithaca, a company designed to
-            accelerate the crypto frontier, and have raised $20M from Paradigm.
+            <span className="font-medium">Kiko Network is a decentralized, user-powered climate monitoring system that leverages a dense network of mobile weather stations deployed on delivery bikes, personal vehicles, and other moving assets.</span> </p>
+
+          <p className="text-lg leading-relaxed">  
+          Unlike traditional weather monitoring, which relies on sparse government or private stations, Kiko creates a hyperlocal, high-frequency data stream by crowdsourcing environmental data collection.
           </p>
 
           <p className="text-lg leading-relaxed">
-            Over the past four years, our global group of less than 20 engineers has shipped some of the industry's most
-            used open source tools like Reth & Foundry. We believe in sustainable open source development for the good
-            of crypto, and in creating the right incentive system for commercial consumer experiences.
+          Our platform provides real-time, street-level insights on temperature, humidity, air quality, and other critical weather metrics, making it valuable for industries like logistics, ride-sharing, insurance, agriculture, and disaster management. 
+          By integrating blockchain-based incentives, contributors who deploy and maintain Kiko nodes earn rewards, ensuring sustainable network growth and data reliability.
           </p>
 
           <p className="text-lg leading-relaxed">
-            The stack is ready. We can achieve the step-level changes needed to enable consumers to fully leverage
-            crypto with fast, cheap, global and private experiences.
+          Our long-term vision is to create a decentralized climate intelligence layer, reshaping how weather data is collected, shared, and monetized globally.
           </p>
         </div>
       </div>
